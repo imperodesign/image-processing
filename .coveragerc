@@ -1,0 +1,12 @@
+[run]
+branch = true
+source = pilbox
+omit = pilbox/test/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def main.app=None.:
+    def main..:
+    if __name__ == .__main__.:
+    except ImportError:
