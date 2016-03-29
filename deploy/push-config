@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export APP_NAME=au-open-uk-necktag-2016
+export APP_NAME=image-processing
 
 if [ "$APP_NAME" = "" ]; then
   echo "APP_NAME must be set."
