@@ -7,16 +7,10 @@ if [ "$APP_NAME" = "" ]; then
   exit;
 fi
 
-./login $1
-
 if [ "$1" = "prd" ]; then
   echo "Deploying to production"
-  git push deis-prd master
+  git push dokku-prd master:master
 else
   echo "Deploying to staging"
-  git push deis-stg development
+  git push dokku-stg development:master
 fi
-
-# Logout
-echo "LOGOUT"
-deis logout
